@@ -38,7 +38,7 @@
       <SidebarGroup>
         <SidebarItem label="Home" href='/' active={activeUrl === '/'} />
         <SidebarItem label="About" href='/about' active={activeUrl === '/about'} />
-        <SidebarItem label="Contact" href='/Contact' active={activeUrl === '/Contact'} />
+        <SidebarItem label="Contact" href='/contact' active={activeUrl === '/contact'} />
       </SidebarGroup>
     </SidebarWrapper>
   </Sidebar>
@@ -67,7 +67,7 @@
     <FooterCopyright href="/" by="J.Flo™" year={2023} />
     
     <FooterLinkGroup ulClass="flex flex-wrap items-center mt-1 text-sm text-gray-500 dark:text-gray-400 sm:mt-0">
-      <FooterLink href="/">About</FooterLink>
+      <FooterLink href="/about">About</FooterLink>
       <FooterLink href="/">Privacy Policy</FooterLink>
       <FooterLink href="/">Licensing</FooterLink>
       <FooterLink href="/">Contact</FooterLink>
