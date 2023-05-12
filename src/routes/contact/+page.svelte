@@ -1,4 +1,12 @@
 <script>
+	import {
+		Footer,
+		FooterBrand,
+		FooterCopyright,
+		FooterIcon,
+		FooterLink,
+		FooterLinkGroup
+	} from 'flowbite-svelte';
 </script>
 
 <section class="bg-white dark:bg-gray-900">
@@ -132,3 +140,15 @@
 		</div>
 	</div>
 </section>
+<Footer class="dark:bg-slate-600 bg-slate-200">
+	<FooterCopyright href="/" by="J.Flo™" year={2023} />
+
+	<FooterLinkGroup
+		ulClass="flex flex-wrap items-center mt-1 text-sm text-gray-500 dark:text-gray-400 sm:mt-0"
+	>
+		<FooterLink href="/about">About</FooterLink>
+		<FooterLink href="/">Privacy Policy</FooterLink>
+		<FooterLink href="/">Licensing</FooterLink>
+		<FooterLink href="/">Contact</FooterLink>
+	</FooterLinkGroup>
+</Footer>
