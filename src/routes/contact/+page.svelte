@@ -7,7 +7,31 @@
 		FooterLink,
 		FooterLinkGroup
 	} from 'flowbite-svelte';
+	import { DarkMode } from 'flowbite-svelte';
+	import { Navbar, NavBrand, NavLi, NavUl, NavHamburger } from 'flowbite-svelte';
+	let btnClass =
+		'text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg text-xl p-2';
+
 </script>
+<Navbar let:hidden let:toggle>
+	<NavBrand href="/">
+		<img
+			src="https://flowbite.com/docs/images/logo.svg"
+			class="mr-3 h-6 sm:h-9"
+			alt="Flowbite Logo"
+		/>
+		<span class="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
+			Flowbite
+		</span>
+	</NavBrand>
+	<NavHamburger on:click={toggle} />
+	<NavUl {hidden}>
+		<NavLi href="/" >Home</NavLi>
+		<NavLi href="/about">About</NavLi>
+		<NavLi href="/contact" active={true}>Contact</NavLi>
+	</NavUl>
+	<DarkMode {btnClass} />
+</Navbar>
 
 <section class="bg-white dark:bg-gray-900">
 	<div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
@@ -147,8 +171,8 @@
 		ulClass="flex flex-wrap items-center mt-1 text-sm text-gray-500 dark:text-gray-400 sm:mt-0"
 	>
 		<FooterLink href="/about">About</FooterLink>
-		<FooterLink href="/">Privacy Policy</FooterLink>
-		<FooterLink href="/">Licensing</FooterLink>
-		<FooterLink href="/">Contact</FooterLink>
+		<FooterLink href="/">Home</FooterLink>
+		<!-- <FooterLink href="/">Licensing</FooterLink> -->
+		<FooterLink active={true} href="/contact">Contact</FooterLink>
 	</FooterLinkGroup>
 </Footer>

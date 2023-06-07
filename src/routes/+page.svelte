@@ -96,8 +96,8 @@
 		ulClass="flex flex-wrap items-center mt-1 text-sm text-gray-500 dark:text-gray-400 sm:mt-0"
 	>
 		<FooterLink href="/about">About</FooterLink>
-		<FooterLink href="/">Privacy Policy</FooterLink>
-		<FooterLink href="/">Licensing</FooterLink>
-		<FooterLink href="/">Contact</FooterLink>
+		<FooterLink active={true} href="/">Home</FooterLink>
+	
+		<FooterLink href="/contact">Contact</FooterLink>
 	</FooterLinkGroup>
 </Footer>
